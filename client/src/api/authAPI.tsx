@@ -1,4 +1,4 @@
-import { UserLogin } from "../interfaces/UserLogin";
+import type { UserLogin } from '../interfaces/UserLogin';
 
 const login = async (userInfo: UserLogin) => {
   // TODO: make a POST request to the login route
@@ -22,7 +22,7 @@ const login = async (userInfo: UserLogin) => {
     if (err instanceof Error) {
       console.error('Error from user login:', err.message);
     } else {
-      console.error('Error from user lgoin:', err);
+      console.error('Error from user login:', err);
     }
     return Promise.reject('Could not fetch user info');
   }
